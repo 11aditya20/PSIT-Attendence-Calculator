@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Attendance Calculator</h1>
+        <form id="attendance-form">
+            <label for="total-lectures">Total Lectures:</label>
+            <input type="number" id="total-lectures" required>
+            
+            <label for="total-absent">Total Absent:</label>
+            <input type="number" id="total-absent" required>
+            
+            <label for="total-delegation">Total Delegation:</label>
+            <input type="number" id="total-delegation" required>
+            
+            <button type="button" onclick="calculateAttendance()">Calculate</button>
+        </form>
+        <div id="result" class="result"></div>
+        
+        <h2>Calculate Lectures to Miss</h2>
+        <form id="miss-lectures-form">
+            <label for="current-attendance">Current Attendance (%):</label>
+            <input type="number" id="current-attendance" step="0.01" required>
+            
+            <label for="target-attendance">Target Attendance (%):</label>
+            <input type="number" id="target-attendance" step="0.01" required>
+            
+            <label for="future-lectures">Total Lectures After Missing:</label>
+            <input type="number" id="future-lectures" required>
+            
+            <button type="button" onclick="calculateMissedLectures()">Calculate</button>
+        </form>
+        <div id="miss-result" class="result"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
